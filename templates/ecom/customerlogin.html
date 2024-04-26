@@ -4,21 +4,52 @@
   <head>
     <meta charset="utf-8">
     <title>Simple E-commerce</title>
+<style>
+  body{
+    background-image: url("static/images/download.jpeg");
+    background-size:cover;
+    overflow:hidden;
+  }
 
+  .login-btn {
+    width: 9em;
+    height: 3em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+   }
+   .login-btn:hover{
+
+    background-color: rgba(255,160,34,255);
+    border-style: solid;
+
+    color:white;
+    transition: .2s ease;
+   }
+  
+</style>
+    
   </head>
   <body>
     {% include "ecom/navbar.html" %}
-    <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+    <div class="container text-center " style=" background-color:rgb(0 0 0 / 20%); backdrop-filter: blur(8px); width:30%;  border-radius:20px; margin-top:10% ">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12 ">
             <div class="card">
-                <form class="box" method="post">
+                <form class="box" method="post" >
                   {% csrf_token %}
-                    <h1>Customer Login</h1>
+                    <h1 class="mb-5" style="color:white">Customer Login</h1>
+                    <br><br>
                     
                                {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
+                               <br>
                                {% render_field form.password class="form-control" placeholder="Password" %}
-                     <input type="submit" name="" value="Login" >
+                               <br>
+                     <input type="submit" class="login-btn"name="" value="Login" style="margin-bottom:20px;" >
 
                 </form>
             </div>
@@ -28,6 +59,7 @@
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br>
+
 
   </body>
 </html>
