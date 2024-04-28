@@ -1,12 +1,45 @@
 {% extends 'ecom/homebase.html' %}
 {% load static %}
 {% block content %}
+
+<style>
+    body{
+        background-image: url("static/images/download.jpeg");
+        background-size:cover;
+        overflow:hidden;
+      }
+
+    h2{
+        color:white;
+    }
+
+
+.login-lout {
+        color:orange;
+        font-size:30px;
+        border-style:solid;
+        padding:7px;
+        background-color:grey;
+        border-radius:5px;
+        
+}
+
+.login-lout:hover{
+    opacity:80%;
+    color:grey;
+    background-color:orange;
+    text-decoration:none;
+}
+</style>
+
 <br><br><br>
 <!-- <img src="{% static "images/logout_img.png" %}"  style="width:800px; height:100px; padding-left:400px;"> -->
 
-<center>
+<center >
     <h2>You've logged out successfully!</h2>
+    <a class="login-lout" href="/customerlogin">Login</a>
 </center>
+
 
 <br><br><br><br><br>
 <br><br><br><br><br>

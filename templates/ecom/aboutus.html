@@ -7,52 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Whamazon</title>
  <style>
-  .design {
-    /* Basic dimensions and centering */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    /* Dark mode colors and gradient */
-    background: #121212; /* Fallback for browsers that don't support gradients */
-    background: linear-gradient(
-      135deg,
-      #121212 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      #121212 50%,
-      #121212 75%,
-      #1a1a1a 75%,
-      #1a1a1a
-    );
-    background-size: 40px 40px;
-  
-    /* Animation */
-    animation: move 4s linear infinite;
+  body{
+    background-image: url("static/images/download.jpeg");
+    background-size:cover;
+    overflow:hidden;
   }
   
-  @keyframes move {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 40px 40px;
-    }
-  }
-  
-  p{
+  center{
     color:white;
     font-size:40px;
     text-align:center;
-    background-color:rgb(0 0 0 / 50%);
-    backdrop-filter: blur(8px);
+    
+    
+   
   }
  </style>
 </head>
 
-<body class="design" style="background-color:#f7f7f7;">
+<body  style="background-color:#f7f7f7;">
   <div >
   {%if request.user.is_authenticated%}
     {% include "ecom/customer_navbar.html" %}
@@ -61,11 +33,12 @@
   {%endif%}
   <br><br><br>
   <div class="row justify-content-md-center">
+   
     <div class="col-md-12 ">
-        <div class="card">
-            <p>Welcome to Whamazon, where convenience, quality, and customer satisfaction converge to redefine online shopping. As a global marketplace, Whamazon connects sellers and buyers with an extensive array of products, embodying simplicity and efficiency at its core. Our journey began with a vision to streamline the shopping experience, evolving continually to meet the dynamic needs of our community. With a commitment to integrity, innovation, and inclusivity, Whamazon sets itself apart, offering lightning-fast delivery and access to millions of items. Join us in shaping the future of retail, where every interaction reflects our dedication to excellence and customer-centric values.</p>
-        </div>
+        <center>Hi Nerds</center>
+        
     </div>
+  
 </div>
 
 
